@@ -19,7 +19,7 @@ const LoadingBlock = styled.div`
 const NewsList = ({ category }) => {
     const [loading, data, error] = usePromise(() => {
         const pageCategory = `&category=${category}` || null
-        return axios.get(`http://newsapi.org/v2/top-headlines?country=kr${pageCategory}&apiKey=1e207782825c4d039d4fa86604c57790`)
+        return axios.get(`https://newsapi.org/v2/top-headlines?country=kr${pageCategory}&apiKey=1e207782825c4d039d4fa86604c57790`)
     }, [category])
 
     if (loading) {
