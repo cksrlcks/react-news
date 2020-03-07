@@ -8,7 +8,7 @@ const App = () => {
 
     return (
         <div>
-            <Router>
+            <Router basename='/react-news'>
                 <Nav />
                 <Switch>
                     <Route path='/:category?' component={NewsPage} />
